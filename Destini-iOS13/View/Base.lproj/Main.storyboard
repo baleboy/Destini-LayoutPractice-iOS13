@@ -1,9 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14854.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14806.4"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -14,8 +16,60 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" insetsLayoutMarginsFromSafeArea="NO" image="background" translatesAutoresizingMaskIntoConstraints="NO" id="A38-rM-76k">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                            </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="E5B-eE-7ju">
+                                <rect key="frame" x="0.0" y="48" width="414" height="814"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="top" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OvK-oj-62A" userLabel="Description">
+                                        <rect key="frame" x="20" y="0.0" width="374" height="729"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="25"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wJA-42-e4G" userLabel="Choice 1 Button">
+                                        <rect key="frame" x="82" y="737" width="250" height="34.5"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="250" id="adt-NA-Xvh"/>
+                                            <constraint firstAttribute="height" constant="34.5" id="jsf-bc-w4c"/>
+                                        </constraints>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Button">
+                                            <backgroundConfiguration key="background" image="choice1Background"/>
+                                        </buttonConfiguration>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7ZA-WL-gwg" userLabel="Choice 2 Button">
+                                        <rect key="frame" x="82" y="779.5" width="250" height="34.5"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="34.5" id="B7E-KP-O4W"/>
+                                            <constraint firstAttribute="width" constant="250" id="bnT-p4-9Nv"/>
+                                        </constraints>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Button">
+                                            <backgroundConfiguration key="background" image="choice2Background"/>
+                                        </buttonConfiguration>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="OvK-oj-62A" firstAttribute="leading" secondItem="E5B-eE-7ju" secondAttribute="leading" constant="20" symbolic="YES" id="QV8-ms-YiL"/>
+                                    <constraint firstAttribute="trailing" secondItem="OvK-oj-62A" secondAttribute="trailing" constant="20" symbolic="YES" id="lGE-j6-TlE"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="A38-rM-76k" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="7CP-c1-NHL"/>
+                            <constraint firstItem="A38-rM-76k" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="JkP-2y-bxC"/>
+                            <constraint firstItem="A38-rM-76k" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="OFW-kB-tcc"/>
+                            <constraint firstItem="E5B-eE-7ju" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Uvx-4a-hQF"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="E5B-eE-7ju" secondAttribute="bottom" id="VdP-23-yEu"/>
+                            <constraint firstItem="E5B-eE-7ju" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="y19-7d-dl9"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="E5B-eE-7ju" secondAttribute="trailing" id="yJp-ZR-KRC"/>
+                            <constraint firstAttribute="bottom" secondItem="A38-rM-76k" secondAttribute="bottom" id="yTJ-7K-GhL"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -23,4 +77,12 @@
             <point key="canvasLocation" x="137.68115942028987" y="137.94642857142856"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="background" width="958" height="1793"/>
+        <image name="choice1Background" width="1370.5" height="363"/>
+        <image name="choice2Background" width="1370.5" height="363"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
 </document>
