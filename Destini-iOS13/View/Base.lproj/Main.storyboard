@@ -23,33 +23,39 @@
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="E5B-eE-7ju">
                                 <rect key="frame" x="0.0" y="48" width="414" height="814"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="top" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OvK-oj-62A" userLabel="Description">
-                                        <rect key="frame" x="20" y="0.0" width="374" height="729"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="top" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OvK-oj-62A" userLabel="Description">
+                                        <rect key="frame" x="20" y="0.0" width="374" height="650"/>
                                         <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="25"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wJA-42-e4G" userLabel="Choice 1 Button">
-                                        <rect key="frame" x="82" y="737" width="250" height="34.5"/>
+                                        <rect key="frame" x="82" y="658" width="250" height="74"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="250" id="adt-NA-Xvh"/>
-                                            <constraint firstAttribute="height" constant="34.5" id="jsf-bc-w4c"/>
+                                            <constraint firstAttribute="height" constant="74" id="jsf-bc-w4c"/>
                                         </constraints>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" title="Button">
                                             <backgroundConfiguration key="background" image="choice1Background"/>
                                         </buttonConfiguration>
+                                        <connections>
+                                            <action selector="choiceSelected:" destination="BYZ-38-t0r" eventType="touchUpInside" id="irX-8y-CHg"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7ZA-WL-gwg" userLabel="Choice 2 Button">
-                                        <rect key="frame" x="82" y="779.5" width="250" height="34.5"/>
+                                        <rect key="frame" x="82" y="740" width="250" height="74"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="34.5" id="B7E-KP-O4W"/>
+                                            <constraint firstAttribute="height" constant="74" id="B7E-KP-O4W"/>
                                             <constraint firstAttribute="width" constant="250" id="bnT-p4-9Nv"/>
                                         </constraints>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" title="Button">
                                             <backgroundConfiguration key="background" image="choice2Background"/>
                                         </buttonConfiguration>
+                                        <connections>
+                                            <action selector="choiceSelected:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Lmu-Zf-2ja"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <constraints>
@@ -71,6 +77,11 @@
                             <constraint firstAttribute="bottom" secondItem="A38-rM-76k" secondAttribute="bottom" id="yTJ-7K-GhL"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="choice1Button" destination="wJA-42-e4G" id="N4y-c2-r8y"/>
+                        <outlet property="choice2Button" destination="7ZA-WL-gwg" id="ogK-MF-Unl"/>
+                        <outlet property="titleLabel" destination="OvK-oj-62A" id="GVv-EK-kAC"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
